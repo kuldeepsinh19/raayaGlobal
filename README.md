@@ -1,6 +1,6 @@
 # Raaya Global Solutions
 
-Professional agricultural export website — informational + lead generation.
+Professional agricultural export website, informational + lead generation.
 
 **Stack:** Node.js · TypeScript · Express · React · Vite · Tailwind CSS
 
