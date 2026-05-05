@@ -4,9 +4,9 @@ import SectionHeader from '../molecules/SectionHeader';
 
 export default function CategoryShowcase() {
   return (
-    <section className="py-24 bg-[#f9fafb]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
+    <section className="py-12 sm:py-16 md:py-24 bg-[#f9fafb]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="mb-8 sm:mb-12">
           <SectionHeader
             label="What we export"
             title={

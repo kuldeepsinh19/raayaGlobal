@@ -25,9 +25,9 @@ export default function CategoryCard({ label, tagline, path, imageUrl, index }: 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
         <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute bottom-0 left-0 p-6">
-          <p className="text-xl font-semibold text-white tracking-tight">{label}</p>
-          <p className="text-sm text-white/70 mt-1">{tagline}</p>
+        <div className="absolute bottom-0 left-0 p-4 sm:p-6">
+          <p className="text-lg sm:text-xl font-semibold text-white tracking-tight">{label}</p>
+          <p className="text-xs sm:text-sm text-white/70 mt-1">{tagline}</p>
         </div>
       </Link>
     </motion.div>

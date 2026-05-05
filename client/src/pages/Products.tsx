@@ -38,24 +38,24 @@ export default function Products() {
 
   return (
     <>
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-10">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-6 sm:mb-10">
             <p className="text-xs uppercase tracking-widest text-green-600 mb-3">Our products</p>
             <h1 className="text-headline font-semibold text-[#0a0a0a] tracking-tight">
               Premium exports from India.
             </h1>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-5 sm:mb-8">
             <CategoryFilter active={activeFilter} onChange={handleFilterChange} />
           </div>
 
-          <p className="text-sm text-gray-400 mb-8">
+          <p className="text-xs sm:text-sm text-gray-400 mb-5 sm:mb-8">
             Showing {filtered.length} product{filtered.length !== 1 ? 's' : ''}
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
             {filtered.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

@@ -23,21 +23,21 @@ const CONTACT_ROWS = [
 export default function Contact() {
   return (
     <>
-      <section className="bg-[#0a0a0a] py-28">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#0a0a0a] py-16 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <p className="text-xs uppercase tracking-widest text-green-500 mb-5">Contact</p>
           <h1 className="text-hero font-semibold text-white tracking-tight leading-[1.08] max-w-2xl">
             We'd love to hear from you.
           </h1>
-          <p className="mt-6 text-gray-400 text-xl max-w-xl leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-gray-400 text-base sm:text-xl max-w-xl leading-relaxed">
             Reach out with your sourcing requirements, partnership enquiries, or
             anything else. Our team responds promptly.
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-xl">
             <div className="space-y-0 divide-y divide-gray-100">
               {CONTACT_ROWS.map(({ Icon, label, values }) => (

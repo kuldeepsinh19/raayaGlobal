@@ -12,8 +12,8 @@ const ABOUT_METRICS = [
 export default function About() {
   return (
     <>
-      <section className="bg-[#0a0a0a] py-28">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#0a0a0a] py-16 sm:py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <p className="text-xs uppercase tracking-widest text-green-500 mb-5">About us</p>
           <h1 className="text-hero font-semibold text-white tracking-tight leading-[1.08] max-w-3xl">
             Growing from the heart of India. Reaching every corner of the world.
@@ -21,9 +21,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <section className="py-12 sm:py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <div>
               <p className="text-xl-body text-gray-500 leading-relaxed">
                 Raaya Global Solutions was founded with a single conviction: India's
@@ -51,15 +51,15 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#f9fafb]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-14">
+      <section className="py-12 sm:py-16 md:py-24 bg-[#f9fafb]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-8 sm:mb-14">
             <p className="text-xs uppercase tracking-widest text-green-600 mb-3">Our pillars</p>
             <h2 className="text-headline font-semibold text-[#0a0a0a] tracking-tight max-w-md">
               Principles that guide everything we do.
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             {PILLARS.map((pillar, i) => (
               <PillarCard key={pillar.title} {...pillar} index={i} />
             ))}

@@ -24,19 +24,19 @@ export default function Enquiry() {
   }
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="mb-8 sm:mb-12">
           <p className="text-xs uppercase tracking-widest text-green-600 mb-3">Get in touch</p>
           <h1 className="text-headline font-semibold text-[#0a0a0a] tracking-tight max-w-lg">
             Tell us what you need.
           </h1>
-          <p className="mt-4 text-gray-500 text-lg max-w-xl">
+          <p className="mt-3 sm:mt-4 text-gray-500 text-base sm:text-lg max-w-xl">
             Share your requirements and our team will respond within 24 hours.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
           <div className="lg:col-span-2">
             {submitStatus === 'success' ? (
               <div className="flex flex-col items-start gap-4 py-12 border-t border-gray-200">

@@ -13,9 +13,9 @@ const stagger = {
 
 export default function Hero() {
   return (
-    <section className="min-h-[92vh] bg-white flex items-center">
-      <div className="max-w-7xl mx-auto px-6 w-full py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-[80vh] sm:min-h-[92vh] bg-white flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full py-12 sm:py-16 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div variants={stagger} initial="hidden" animate="visible">
             <motion.p
               variants={fadeUp}
@@ -33,14 +33,14 @@ export default function Hero() {
 
             <motion.p
               variants={fadeUp}
-              className="mt-6 text-xl text-gray-500 leading-relaxed max-w-lg"
+              className="mt-4 sm:mt-6 text-base sm:text-xl text-gray-500 leading-relaxed max-w-lg"
             >
               Raaya Global Solutions exports premium vegetables, fruits, grains,
               and spices sourced directly from Indian farms, meeting international
               quality standards with every shipment.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-10 flex flex-wrap gap-4">
+            <motion.div variants={fadeUp} className="mt-8 sm:mt-10 flex flex-wrap gap-4">
               <Button
                 to="/products"
                 variant="primary"

@@ -22,10 +22,10 @@ export default {
         sans: ['Inter var', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        display: ['80px', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
-        hero: ['56px', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
-        headline: ['40px', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'xl-body': ['20px', { lineHeight: '1.6' }],
+        display: ['clamp(38px, 7vw, 80px)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        hero: ['clamp(28px, 5vw, 56px)', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
+        headline: ['clamp(22px, 3.5vw, 40px)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
+        'xl-body': ['clamp(16px, 1.8vw, 20px)', { lineHeight: '1.6' }],
       },
       maxWidth: {
         '8xl': '88rem',

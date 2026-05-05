@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
         <Link
           to="/"
           className="text-[#0a0a0a] font-semibold text-lg tracking-tight hover:opacity-80 transition-opacity"
@@ -51,7 +51,7 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100">
-          <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+          <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
             {NAV_LINKS.map(({ label, path }) => (
               <NavLink
                 key={path}
