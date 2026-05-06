@@ -18,14 +18,11 @@ export default function Navbar() {
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           onClick={closeMenu}
         >
-          <img 
-            src="/logo.png" 
-            alt="Raaya Global Solutions Logo" 
-            className="h-8 w-auto"
+          <img
+            src="/logo.png"
+            alt="Raaya Global Solutions Logo"
+            className="h-12 w-auto"
           />
-          <span className="text-[#0a0a0a] font-semibold text-lg tracking-tight">
-            Raaya Global Solutions
-          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
