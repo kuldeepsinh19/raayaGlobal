@@ -8,7 +8,10 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="group border border-gray-200 hover:border-gray-400 transition-colors rounded-md overflow-hidden bg-white">
+    <Link
+      to={`/enquiry?product=${encodeURIComponent(product.name)}`}
+      className="group block border border-gray-200 hover:border-gray-400 rounded-md overflow-hidden bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+    >
       <div className="aspect-[4/3] overflow-hidden">
         <img
           src={product.imageUrl}
@@ -20,13 +23,10 @@ export default function ProductCard({ product }: ProductCardProps) {
         <CategoryBadge category={product.category} />
         <h3 className="mt-1 sm:mt-1.5 text-sm sm:text-base font-semibold text-[#0a0a0a]">{product.name}</h3>
         <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-gray-500 leading-relaxed line-clamp-2">{product.tagline}</p>
-        <Link
-          to={`/enquiry?product=${encodeURIComponent(product.name)}`}
-          className="inline-block mt-3 sm:mt-4 text-xs sm:text-sm font-medium text-[#0a0a0a] border-b border-[#0a0a0a] hover:text-green-600 hover:border-green-600 transition-colors pb-0.5"
-        >
+        <span className="inline-block mt-3 sm:mt-4 text-xs sm:text-sm font-medium text-[#0a0a0a] border-b border-[#0a0a0a] group-hover:text-green-600 group-hover:border-green-600 transition-colors pb-0.5">
           Enquire
-        </Link>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }

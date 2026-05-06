@@ -15,7 +15,7 @@ export default function EnquiryCta() {
         </div>
         <Link
           to="/enquiry"
-          className="flex-shrink-0 inline-flex items-center gap-2 border border-white text-white px-7 py-3.5 text-sm font-medium rounded-md hover:bg-white hover:text-[#0a0a0a] transition-colors"
+          className="flex-shrink-0 inline-flex items-center gap-2 border border-white text-white px-7 py-3.5 text-sm font-medium rounded-md hover:bg-white hover:text-[#0a0a0a] hover:scale-105 hover:shadow-lg transition-all duration-200"
         >
           Send an Enquiry
           <ArrowRight size={16} strokeWidth={1.75} />

@@ -15,10 +15,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="text-[#0a0a0a] font-semibold text-lg tracking-tight hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           onClick={closeMenu}
         >
-          Raaya Global
+          <img 
+            src="/logo.png" 
+            alt="Raaya Global Solutions Logo" 
+            className="h-8 w-auto"
+          />
+          <span className="text-[#0a0a0a] font-semibold text-lg tracking-tight">
+            Raaya Global Solutions
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -28,10 +35,10 @@ export default function Navbar() {
               to={path}
               end={path === '/'}
               className={({ isActive }) =>
-                `text-sm transition-colors ${
+                `text-sm transition-colors duration-200 ${
                   isActive
                     ? 'text-green-600 font-medium'
-                    : 'text-gray-500 hover:text-[#0a0a0a]'
+                    : 'text-gray-500 hover:text-green-600'
                 }`
               }
             >

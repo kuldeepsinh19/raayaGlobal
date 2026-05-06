@@ -50,14 +50,14 @@ export default function Hero() {
             >
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 text-sm font-medium rounded-md hover:bg-green-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-7 py-3.5 text-sm font-medium rounded-md hover:bg-green-700 hover:scale-105 hover:shadow-lg transition-all duration-200"
               >
                 Explore Products
                 <ArrowRight size={16} strokeWidth={1.75} />
               </Link>
               <Link
                 to="/enquiry"
-                className="inline-flex items-center gap-2 border border-[#0a0a0a] text-[#0a0a0a] px-6 py-3 text-sm font-medium rounded-md hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center gap-2 border border-[#0a0a0a] text-[#0a0a0a] px-7 py-3.5 text-sm font-medium rounded-md hover:bg-gray-50 hover:scale-105 hover:shadow-lg transition-all duration-200"
               >
                 Send an Enquiry
               </Link>

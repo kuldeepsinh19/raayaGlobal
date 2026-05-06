@@ -5,11 +5,11 @@ export type ButtonVariant = 'primary' | 'outline-dark' | 'outline-light' | 'text
 
 const variantClass: Record<ButtonVariant, string> = {
   primary:
-    'inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 text-sm font-medium rounded-md hover:bg-green-700 transition-colors',
+    'inline-flex items-center gap-2 bg-green-600 text-white px-7 py-3.5 text-sm font-medium rounded-md hover:bg-green-700 hover:scale-105 hover:shadow-lg transition-all duration-200',
   'outline-dark':
-    'inline-flex items-center gap-2 border border-[#0a0a0a] text-[#0a0a0a] px-6 py-3 text-sm font-medium rounded-md hover:bg-gray-50 transition-colors',
+    'inline-flex items-center gap-2 border border-[#0a0a0a] text-[#0a0a0a] px-7 py-3.5 text-sm font-medium rounded-md hover:bg-gray-50 hover:scale-105 hover:shadow-lg transition-all duration-200',
   'outline-light':
-    'flex-shrink-0 inline-flex items-center gap-2 border border-white text-white px-7 py-3.5 text-sm font-medium rounded-md hover:bg-white hover:text-[#0a0a0a] transition-colors',
+    'flex-shrink-0 inline-flex items-center gap-2 border border-white text-white px-7 py-3.5 text-sm font-medium rounded-md hover:bg-white hover:text-[#0a0a0a] hover:scale-105 hover:shadow-lg transition-all duration-200',
   text: 'inline-block text-sm font-medium text-[#0a0a0a] border-b border-[#0a0a0a] hover:text-green-600 hover:border-green-600 transition-colors pb-0.5',
 };
 

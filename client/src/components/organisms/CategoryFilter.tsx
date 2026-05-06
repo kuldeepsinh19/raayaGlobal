@@ -14,10 +14,10 @@ export default function CategoryFilter({ active, onChange }: CategoryFilterProps
           <button
             key={value}
             onClick={() => onChange(value)}
-            className={`pb-3 text-xs sm:text-sm font-medium border-b-2 transition-colors -mb-px ${
+            className={`pb-3 text-xs sm:text-sm transition-all duration-200 -mb-px ${
               isActive
-                ? 'border-green-600 text-green-600'
-                : 'border-transparent text-gray-400 hover:text-[#0a0a0a]'
+                ? 'border-b-3 border-green-600 text-green-600 font-semibold'
+                : 'border-b-2 border-transparent text-gray-400 hover:text-green-600 hover:border-green-600'
             }`}
           >
             {label}

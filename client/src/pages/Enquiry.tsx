@@ -6,7 +6,7 @@ import { CONTACT_INFO } from '../constants/contact';
 import { ENQUIRY_PRODUCT_OPTIONS } from '../constants/productOptions';
 
 const inputBase =
-  'w-full rounded-none border border-gray-300 bg-white px-4 py-3 text-sm text-[#0a0a0a] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-green-600 focus:border-green-600 transition';
+  'w-full rounded-md border border-gray-300 bg-white px-4 py-3.5 text-sm text-[#0a0a0a] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-green-600 focus:border-green-600 transition';
 
 export default function Enquiry() {
   const [searchParams] = useSearchParams();
@@ -154,7 +154,7 @@ export default function Enquiry() {
                 <button
                   type="submit"
                   disabled={submitStatus === 'submitting'}
-                  className="w-full bg-green-600 text-white py-3.5 text-sm font-medium rounded-md hover:bg-green-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-green-600 text-white py-4 text-sm font-medium rounded-md hover:bg-green-700 hover:scale-105 active:scale-95 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {submitStatus === 'submitting' ? 'Sending…' : 'Send Enquiry'}
                 </button>
