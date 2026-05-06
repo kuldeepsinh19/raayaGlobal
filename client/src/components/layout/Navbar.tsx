@@ -15,10 +15,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="text-[#0a0a0a] font-semibold text-lg tracking-tight hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           onClick={closeMenu}
         >
-          Raaya Global
+          <img
+            src="/logo.png"
+            alt="Raaya Global Solutions Logo"
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
