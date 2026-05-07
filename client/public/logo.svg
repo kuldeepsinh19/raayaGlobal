@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <rect width="400" height="400" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <rect width="500" height="500" fill="white"/>
 
   <!-- Globe base circle -->
   <circle cx="200" cy="155" r="90" fill="#1B3A6B"/>
