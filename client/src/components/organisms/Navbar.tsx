@@ -21,8 +21,11 @@ export default function Navbar() {
           <img
             src="/logo.svg"
             alt="Raaya Global Solutions Logo"
-            className="h-12 w-auto"
+            className="h-10 w-auto"
           />
+          <span className="text-[#1B3A6B] font-bold text-lg tracking-tight hidden sm:block">
+            Raaya Global Solutions
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
