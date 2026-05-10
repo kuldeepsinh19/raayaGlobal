@@ -19,9 +19,9 @@ export default function Navbar() {
           onClick={closeMenu}
         >
           <img
-            src="/logo.svg"
+            src="/logo.png"
             alt="Raaya Global Solutions Logo"
-            className="h-10 w-auto"
+            className="h-10 w-auto object-contain"
           />
           <span className="text-[#1B3A6B] font-bold text-lg tracking-tight hidden sm:block">
             Raaya Global Solutions
