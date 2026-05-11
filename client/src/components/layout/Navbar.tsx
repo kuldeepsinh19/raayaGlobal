@@ -23,7 +23,7 @@ export default function Navbar() {
             alt="Raaya Global Solutions Logo"
             className="h-16 sm:h-20 w-auto object-contain"
           />
-          <span className="text-[#1B3A6B] font-bold text-xl sm:text-2xl whitespace-nowrap">
+          <span className="text-black font-bold text-xl sm:text-2xl whitespace-nowrap">
             Raaya Global Solutions
           </span>
         </Link>
