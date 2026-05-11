@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-20 sm:h-24 flex items-center justify-between">
         <Link
           to="/"
           className="flex items-center hover:opacity-80 transition-opacity"
@@ -21,7 +21,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="Raaya Global Solutions Logo"
-            className="h-12 sm:h-14 w-auto object-contain"
+            className="h-16 sm:h-20 w-auto object-contain"
           />
         </Link>
 
