@@ -12,18 +12,18 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 sm:h-24 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 md:h-24 flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity"
           onClick={closeMenu}
         >
           <img
             src="/logo.png"
             alt="Raaya Global Solutions Logo"
-            className="h-16 sm:h-20 w-auto object-contain"
+            className="h-12 sm:h-16 md:h-20 w-auto object-contain"
           />
-          <span className="text-black font-bold text-xl sm:text-2xl whitespace-nowrap">
+          <span className="hidden sm:block text-black font-bold text-lg sm:text-xl md:text-2xl whitespace-nowrap">
             Raaya Global Solutions
           </span>
         </Link>
