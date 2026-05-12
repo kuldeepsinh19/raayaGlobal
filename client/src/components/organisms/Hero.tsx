@@ -40,15 +40,16 @@ export default function Hero() {
               quality standards with every shipment.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-8 sm:mt-10 flex flex-wrap gap-4">
+            <motion.div variants={fadeUp} className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
                 to="/products"
                 variant="primary"
                 icon={<ArrowRight size={16} strokeWidth={1.75} />}
+                className="w-full justify-center sm:w-auto"
               >
                 Explore Products
               </Button>
-              <Button to="/enquiry" variant="outline-dark">
+              <Button to="/enquiry" variant="outline-dark" className="w-full justify-center sm:w-auto">
                 Send an Enquiry
               </Button>
             </motion.div>
