@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-[#1f2937]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pb-12 border-b border-[#1f2937]">
           <div>
             <p className="text-base font-semibold mb-1">Raaya Global Solutions</p>
             <p className="text-gray-400 text-sm leading-relaxed mt-3 max-w-xs">

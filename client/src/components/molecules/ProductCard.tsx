@@ -21,7 +21,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
       <div className="p-3 sm:p-5">
         <CategoryBadge category={product.category} />
-        <h3 className="mt-1 sm:mt-1.5 text-sm sm:text-base font-semibold text-[#0a0a0a]">{product.name}</h3>
+        <h3 className="mt-1 sm:mt-1.5 text-sm sm:text-base font-semibold text-[#0a0a0a] line-clamp-1">{product.name}</h3>
         <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-gray-500 leading-relaxed line-clamp-2">{product.tagline}</p>
         <span className="inline-block mt-3 sm:mt-4 text-xs sm:text-sm font-medium text-[#0a0a0a] border-b border-[#0a0a0a] group-hover:text-green-600 group-hover:border-green-600 transition-colors pb-0.5">
           Enquire

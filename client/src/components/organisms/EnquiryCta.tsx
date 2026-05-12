@@ -17,6 +17,7 @@ export default function EnquiryCta() {
           to="/enquiry"
           variant="outline-light"
           icon={<ArrowRight size={16} strokeWidth={1.75} />}
+          className="w-full justify-center md:w-auto"
         >
           Send an Enquiry
         </Button>

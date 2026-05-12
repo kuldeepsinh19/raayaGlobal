@@ -41,9 +41,9 @@ export default function About() {
             </div>
             <div className="space-y-6">
               {ABOUT_METRICS.map(({ label, value }) => (
-                <div key={label} className="flex items-baseline justify-between border-b border-gray-100 pb-4">
+                <div key={label} className="flex items-baseline justify-between gap-4 border-b border-gray-100 pb-4">
                   <span className="text-sm text-gray-500">{label}</span>
-                  <span className="text-base font-semibold text-[#0a0a0a]">{value}</span>
+                  <span className="text-sm sm:text-base font-semibold text-[#0a0a0a] shrink-0 text-right">{value}</span>
                 </div>
               ))}
             </div>

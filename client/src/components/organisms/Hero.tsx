@@ -13,9 +13,9 @@ const stagger = {
 
 export default function Hero() {
   return (
-    <section className="min-h-[80vh] sm:min-h-[92vh] bg-white flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full py-12 sm:py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <section className="md:min-h-[92vh] bg-white flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full py-16 sm:py-20 md:py-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div variants={stagger} initial="hidden" animate="visible">
             <motion.p
               variants={fadeUp}
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="hidden lg:block"
+            className="hidden md:block"
           >
             <div className="relative aspect-[5/4] rounded-xl overflow-hidden">
               <img
