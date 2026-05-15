@@ -1,5 +1,8 @@
 import { Product } from '../types';
 
+const px = (id: number) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop`;
+
 export const products: Product[] = [
   {
     id: 1,
@@ -7,7 +10,7 @@ export const products: Product[] = [
     slug: 'alphonso-mango',
     category: 'fruits',
     tagline: 'King of mangoes, prized globally for its rich aroma and sweetness',
-    imageUrl: 'https://source.unsplash.com/800x600/?alphonso+mango+fruit',
+    imageUrl: px(4687187),
   },
   {
     id: 2,
@@ -15,7 +18,7 @@ export const products: Product[] = [
     slug: 'banana',
     category: 'fruits',
     tagline: 'Farm-fresh bananas selected for international distribution',
-    imageUrl: 'https://source.unsplash.com/800x600/?banana+fruit',
+    imageUrl: px(16214622),
   },
   {
     id: 3,
@@ -23,7 +26,7 @@ export const products: Product[] = [
     slug: 'grapes',
     category: 'fruits',
     tagline: 'Hand-picked premium grapes meeting global quality benchmarks',
-    imageUrl: 'https://source.unsplash.com/800x600/?grapes+fruit',
+    imageUrl: px(9840058),
   },
   {
     id: 4,
@@ -31,7 +34,7 @@ export const products: Product[] = [
     slug: 'pomegranate',
     category: 'fruits',
     tagline: 'Vibrant, antioxidant-rich pomegranates from Maharashtra',
-    imageUrl: 'https://source.unsplash.com/800x600/?pomegranate+fruit',
+    imageUrl: px(29310030),
   },
   {
     id: 5,
@@ -39,7 +42,7 @@ export const products: Product[] = [
     slug: 'orange',
     category: 'fruits',
     tagline: 'Sweet and tangy Nagpur oranges, India\'s finest citrus',
-    imageUrl: 'https://source.unsplash.com/800x600/?orange+fruit',
+    imageUrl: px(30487656),
   },
   {
     id: 6,
@@ -47,7 +50,7 @@ export const products: Product[] = [
     slug: 'guava',
     category: 'fruits',
     tagline: 'Tropical guavas with a distinctive sweet fragrance',
-    imageUrl: 'https://source.unsplash.com/800x600/?guava+fruit',
+    imageUrl: px(3613159),
   },
   {
     id: 7,
@@ -55,7 +58,7 @@ export const products: Product[] = [
     slug: 'papaya',
     category: 'fruits',
     tagline: 'Nutrient-dense papayas grown in India\'s tropical belt',
-    imageUrl: 'https://source.unsplash.com/800x600/?papaya+fruit',
+    imageUrl: px(36850983),
   },
   {
     id: 8,
@@ -63,7 +66,7 @@ export const products: Product[] = [
     slug: 'chikoo',
     category: 'fruits',
     tagline: 'Sapodilla with honey-like sweetness, a rare export gem',
-    imageUrl: 'https://source.unsplash.com/800x600/?sapodilla+chikoo+fruit',
+    imageUrl: px(28625600),
   },
   {
     id: 9,
@@ -71,7 +74,7 @@ export const products: Product[] = [
     slug: 'tomato',
     category: 'vegetables',
     tagline: 'Firm, bright red tomatoes perfect for processing and fresh use',
-    imageUrl: 'https://source.unsplash.com/800x600/?tomato+vegetable',
+    imageUrl: px(19852145),
   },
   {
     id: 10,
@@ -79,7 +82,7 @@ export const products: Product[] = [
     slug: 'onion',
     category: 'vegetables',
     tagline: 'India\'s most exported vegetable, renowned for pungency',
-    imageUrl: 'https://source.unsplash.com/800x600/?onion+vegetable',
+    imageUrl: px(4163411),
   },
   {
     id: 11,
@@ -87,7 +90,7 @@ export const products: Product[] = [
     slug: 'green-chilli',
     category: 'vegetables',
     tagline: 'Fiery Indian green chillies for global spice markets',
-    imageUrl: 'https://source.unsplash.com/800x600/?green+chilli+pepper',
+    imageUrl: px(5501464),
   },
   {
     id: 13,
@@ -95,7 +98,7 @@ export const products: Product[] = [
     slug: 'okra',
     category: 'vegetables',
     tagline: 'Tender okra pods, a staple in international cuisine',
-    imageUrl: 'https://source.unsplash.com/800x600/?okra+ladyfinger+vegetable',
+    imageUrl: px(33778446),
   },
   {
     id: 14,
@@ -103,7 +106,7 @@ export const products: Product[] = [
     slug: 'bitter-gourd',
     category: 'vegetables',
     tagline: 'Prized for medicinal value in Asian and African markets',
-    imageUrl: 'https://source.unsplash.com/800x600/?bitter+gourd+karela',
+    imageUrl: px(28909474),
   },
   {
     id: 15,
@@ -111,7 +114,7 @@ export const products: Product[] = [
     slug: 'cucumber',
     category: 'vegetables',
     tagline: 'Cool, crisp cucumbers with high water content and freshness',
-    imageUrl: 'https://source.unsplash.com/800x600/?cucumber+vegetable',
+    imageUrl: px(2329440),
   },
   {
     id: 16,
@@ -119,7 +122,7 @@ export const products: Product[] = [
     slug: 'garlic',
     category: 'vegetables',
     tagline: 'Aromatic Indian garlic with intense flavour and long shelf life',
-    imageUrl: 'https://source.unsplash.com/800x600/?garlic+cloves',
+    imageUrl: px(25315388),
   },
   {
     id: 17,
@@ -127,7 +130,7 @@ export const products: Product[] = [
     slug: 'ginger',
     category: 'vegetables',
     tagline: 'Fresh and dried ginger, a cornerstone of everyday cooking',
-    imageUrl: 'https://source.unsplash.com/800x600/?ginger+root',
+    imageUrl: px(17801790),
   },
   {
     id: 18,
@@ -135,7 +138,7 @@ export const products: Product[] = [
     slug: 'basmati-rice',
     category: 'grains',
     tagline: 'Long-grain, aromatic basmati aged for premium quality',
-    imageUrl: 'https://source.unsplash.com/800x600/?basmati+rice+grains',
+    imageUrl: px(7851798),
   },
   {
     id: 19,
@@ -143,7 +146,7 @@ export const products: Product[] = [
     slug: 'wheat',
     category: 'grains',
     tagline: 'High-protein Indian wheat, ideal for milling and export',
-    imageUrl: 'https://source.unsplash.com/800x600/?wheat+grain',
+    imageUrl: px(30297986),
   },
   {
     id: 20,
@@ -151,7 +154,7 @@ export const products: Product[] = [
     slug: 'soybean',
     category: 'grains',
     tagline: 'Non-GMO, high-protein soybeans for global food industries',
-    imageUrl: 'https://source.unsplash.com/800x600/?soybean+beans',
+    imageUrl: px(36063252),
   },
   {
     id: 21,
@@ -159,7 +162,7 @@ export const products: Product[] = [
     slug: 'corn',
     category: 'grains',
     tagline: 'Yellow maize grown for feed, starch, and food processing',
-    imageUrl: 'https://source.unsplash.com/800x600/?corn+maize',
+    imageUrl: px(32506154),
   },
   {
     id: 22,
@@ -167,7 +170,7 @@ export const products: Product[] = [
     slug: 'sorghum',
     category: 'grains',
     tagline: 'Drought-resilient grain with growing global demand',
-    imageUrl: 'https://source.unsplash.com/800x600/?sorghum+grain',
+    imageUrl: px(13867829),
   },
   {
     id: 23,
@@ -175,7 +178,7 @@ export const products: Product[] = [
     slug: 'pearl-millet',
     category: 'grains',
     tagline: 'Nutritious bajra with growing demand in health food markets',
-    imageUrl: 'https://source.unsplash.com/800x600/?pearl+millet+bajra',
+    imageUrl: px(10738421),
   },
   {
     id: 24,
@@ -183,7 +186,7 @@ export const products: Product[] = [
     slug: 'cumin-seeds',
     category: 'spices',
     tagline: 'India supplies over 70% of the world\'s cumin. We export only the finest.',
-    imageUrl: 'https://source.unsplash.com/800x600/?cumin+seeds+spice',
+    imageUrl: px(10487762),
   },
   {
     id: 26,
@@ -191,7 +194,7 @@ export const products: Product[] = [
     slug: 'turmeric',
     category: 'spices',
     tagline: 'Vibrant Erode turmeric with the highest curcumin content',
-    imageUrl: 'https://source.unsplash.com/800x600/?turmeric+root+spice',
+    imageUrl: px(17380335),
   },
   {
     id: 27,
@@ -199,7 +202,7 @@ export const products: Product[] = [
     slug: 'red-chilli',
     category: 'spices',
     tagline: 'Sun-dried Guntur chillies, India\'s most sought-after spice export',
-    imageUrl: 'https://source.unsplash.com/800x600/?red+chilli+dried+spice',
+    imageUrl: px(13005175),
   },
   {
     id: 31,
@@ -207,6 +210,6 @@ export const products: Product[] = [
     slug: 'garam-masala',
     category: 'spices',
     tagline: 'Artisan-blended whole spice mix, the soul of Indian cooking',
-    imageUrl: 'https://source.unsplash.com/800x600/?garam+masala+spice+mix',
+    imageUrl: px(4194077),
   },
 ];
