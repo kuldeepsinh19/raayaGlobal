@@ -49,6 +49,26 @@ export default function Enquiry() {
               </div>
             ) : (
               <form onSubmit={handleFormSubmit} noValidate className="space-y-5">
+                {/*
+                  Honeypot. Hidden from people, invisible to screen readers, and
+                  skipped by keyboard navigation — but bots fill every input they
+                  find. The server treats a non-empty value as a bot and silently
+                  discards the submission. Cheap, and it needs no CAPTCHA in front
+                  of a form that buyers have to be able to complete quickly.
+                */}
+                <div className="absolute w-px h-px -m-px overflow-hidden" aria-hidden="true">
+                  <label htmlFor="company_website">Do not fill this in</label>
+                  <input
+                    id="company_website"
+                    name="company_website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.company_website ?? ''}
+                    onChange={handleChange}
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-xs uppercase tracking-widest text-gray-500 mb-2">

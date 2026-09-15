@@ -10,6 +10,7 @@ function buildInitialFormData(prefilledMessage?: string): EnquiryFormData {
     email: '',
     productInterest: '',
     message: prefilledMessage ?? '',
+    company_website: '', // honeypot; see types/index.ts
   };
 }
 

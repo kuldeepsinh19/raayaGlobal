@@ -15,6 +15,12 @@ export interface EnquiryFormData {
   email: string;
   productInterest: ProductCategory | 'general' | '';
   message: string;
+  /**
+   * Honeypot — rendered off-screen and hidden from assistive tech. A human
+   * never fills this in; a bot fills every field it finds. The server discards
+   * any submission where it is non-empty. See api/_lib/http.ts.
+   */
+  company_website?: string;
 }
 
 export interface ApiFieldError {

@@ -1,0 +1,31 @@
+{
+  // Type-checks the Vercel serverless functions in api/.
+  //
+  // The main tsconfig.json has `include: ["src"]`, so `npm run build` was
+  // compiling the React app and never looking at api/ at all — a type error in
+  // the enquiry handler shipped straight to production, where Vercel builds
+  // those files separately. A commit once fixed this and it was lost.
+  //
+  // api/ runs in Node on Vercel, not in the browser, so it needs its own
+  // compiler options: Node types, no DOM lib.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["node"],
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  // Only api/ is listed; TypeScript follows the imports into src/ on its own,
+  // which is how the catalogue shared with the frontend gets checked too.
+  "include": ["api", "scripts"]
+}

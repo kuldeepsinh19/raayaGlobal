@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import TopBar from '../organisms/TopBar';
 import Navbar from '../organisms/Navbar';
 import Footer from '../organisms/Footer';
+import AssistantWidget from '../ai/AssistantWidget';
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,6 +15,8 @@ export default function Layout({ children }: LayoutProps) {
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      {/* Renders nothing unless the assistant is configured on this deployment. */}
+      <AssistantWidget />
     </div>
   );
 }

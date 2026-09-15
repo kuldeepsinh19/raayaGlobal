@@ -1,11 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
 import { products } from '../data/products';
 import { type FilterOption } from '../constants/productOptions';
 import type { ProductCategory } from '../types';
 import ProductCard from '../components/molecules/ProductCard';
 import CategoryFilter from '../components/organisms/CategoryFilter';
 import EnquiryCta from '../components/organisms/EnquiryCta';
+import ProductSearch from '../components/ai/ProductSearch';
+import type { SearchResponse } from '../services/aiApi';
 
 function isValidCategory(value: string): value is ProductCategory {
   return ['fruits', 'vegetables', 'grains', 'spices'].includes(value);
@@ -13,16 +16,21 @@ function isValidCategory(value: string): value is ProductCategory {
 
 export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState<SearchResponse | null>(null);
 
   const categoryParam = searchParams.get('category') ?? '';
   const activeFilter: FilterOption = isValidCategory(categoryParam) ? categoryParam : 'all';
 
-  const filtered =
-    activeFilter === 'all'
+  // A search result takes precedence over the category filter — the buyer has
+  // told us something more specific than a category.
+  const filtered = search
+    ? search.products
+    : activeFilter === 'all'
       ? products
       : products.filter((p) => p.category === activeFilter);
 
   function handleFilterChange(category: FilterOption) {
+    setSearch(null); // picking a category is an explicit exit from search
     if (category === 'all') {
       setSearchParams({});
     } else {
@@ -47,19 +55,43 @@ export default function Products() {
             </h1>
           </div>
 
+          <ProductSearch onResults={setSearch} />
+
           <div className="mb-5 sm:mb-8">
-            <CategoryFilter active={activeFilter} onChange={handleFilterChange} />
+            <CategoryFilter active={search ? 'all' : activeFilter} onChange={handleFilterChange} />
           </div>
 
-          <p className="text-xs sm:text-sm text-gray-400 mb-5 sm:mb-8">
-            Showing {filtered.length} product{filtered.length !== 1 ? 's' : ''}
-          </p>
+          {search ? (
+            <div className="mb-5 sm:mb-8 flex items-start gap-2">
+              {search.mode === 'ai' && (
+                <Sparkles size={15} className="text-green-600 mt-0.5 flex-shrink-0" aria-hidden />
+              )}
+              <p className="text-xs sm:text-sm text-gray-500">
+                {search.summary}
+                {search.mode === 'keyword' && (
+                  <span className="text-gray-400"> (keyword match)</span>
+                )}
+              </p>
+            </div>
+          ) : (
+            <p className="text-xs sm:text-sm text-gray-400 mb-5 sm:mb-8">
+              Showing {filtered.length} product{filtered.length !== 1 ? 's' : ''}
+            </p>
+          )}
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
-            {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          {filtered.length > 0 ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
+              {filtered.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="py-12 text-center">
+              <p className="text-sm text-gray-500">
+                No products matched. Try a different description, or pick a category above.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

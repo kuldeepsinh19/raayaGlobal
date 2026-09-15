@@ -5,17 +5,75 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#16a34a" />
+
+    <title>Raaya Global Solutions | Agricultural Exports from India</title>
     <meta
       name="description"
       content="Raaya Global Solutions — Premium agricultural exports from India. Vegetables, fruits, grains and spices sourced directly from Indian farms."
     />
-    <meta property="og:title" content="Raaya Global Solutions" />
+    <link rel="canonical" href="https://raayaimportexport.vercel.app/" />
+
+    <!--
+      Open Graph. og:image matters more here than it looks: this business shares
+      its link with buyers over WhatsApp and LinkedIn, and without an image tag
+      those previews render as a blank grey box next to the message. An export
+      enquiry often starts with that one link being forwarded.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raaya Global Solutions" />
+    <meta property="og:title" content="Raaya Global Solutions | Agricultural Exports from India" />
     <meta
       property="og:description"
-      content="Connecting India's finest produce to the world."
+      content="Connecting India's finest produce to the world — fruits, vegetables, grains and spices, sourced directly from Indian farms."
     />
-    <meta property="og:type" content="website" />
-    <title>Raaya Global Solutions | Agricultural Exports from India</title>
+    <meta property="og:url" content="https://raayaimportexport.vercel.app/" />
+    <meta property="og:image" content="https://raayaimportexport.vercel.app/logo.png" />
+    <meta property="og:image:alt" content="Raaya Global Solutions logo" />
+    <meta property="og:locale" content="en_IN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Raaya Global Solutions | Agricultural Exports from India" />
+    <meta
+      name="twitter:description"
+      content="Connecting India's finest produce to the world — fruits, vegetables, grains and spices."
+    />
+    <meta name="twitter:image" content="https://raayaimportexport.vercel.app/logo.png" />
+
+    <!--
+      Structured data. This is a single-page app, so a crawler that does not run
+      JavaScript sees only this document — the product grid, the about copy and
+      the contact details are all rendered client-side. Declaring the
+      organisation here gives search engines something concrete regardless.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Raaya Global Solutions",
+        "url": "https://raayaimportexport.vercel.app/",
+        "logo": "https://raayaimportexport.vercel.app/logo.png",
+        "description": "Exporter of premium Indian agricultural produce — fruits, vegetables, grains and spices.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "raayaglobalsolutions@gmail.com",
+          "telephone": "+91 8698034739",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        },
+        "sameAs": ["https://www.instagram.com/raayaglobalsolutions"],
+        "knowsAbout": [
+          "Agricultural export",
+          "Fresh fruit export",
+          "Vegetable export",
+          "Grain export",
+          "Spice export"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -5,17 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev:api": "vercel dev --listen 3000",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.api.json --noEmit",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "smoke": "esbuild scripts/smoke-api.ts --bundle --platform=node --format=cjs --log-level=warning --outfile=node_modules/.cache/smoke-api.cjs && node node_modules/.cache/smoke-api.cjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.126.0",
     "axios": "^1.7.2",
     "framer-motion": "^11.2.11",
     "lucide-react": "^0.396.0",
     "nodemailer": "^6.9.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.0"
+    "react-router-dom": "^6.24.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.15",

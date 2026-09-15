@@ -22,8 +22,16 @@ export default defineConfig({
   plugins: [react(), copyLogoPlugin],
   server: {
     proxy: {
+      // Points at `vercel dev` (port 3000), which serves the functions in api/.
+      //
+      // This used to target localhost:5000 — the Express server in server/ —
+      // while production served client/api/. Local development and production
+      // therefore exercised two completely different backends, which is
+      // precisely how the two implementations drifted apart until they returned
+      // different response shapes. server/ has been removed; there is now one
+      // backend, and `vercel dev` runs the same code Vercel deploys.
       '/api': {
-        target: 'http://localhost:5000',
+        target: process.env.API_PROXY_TARGET || 'http://localhost:3000',
         changeOrigin: true,
       },
     },
