@@ -190,7 +190,18 @@ client/
 
 `api/_lib/catalogue.ts` imports the same `src/data/products.ts` the pages render. That's deliberate: if the assistant read from its own copy, the two would drift the moment anyone added a product, and it would start confidently describing items the company doesn't sell.
 
-📐 **Design decisions and trade-offs, including the ones deliberately not taken: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
+---
+
+## Documentation
+
+| Doc | Read it when |
+|---|---|
+| 📐 **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** | You want the *why* — the ordering constraint, the guardrail contract, and what was deliberately left out |
+| 🤖 **[AI-FEATURES.md](docs/AI-FEATURES.md)** | You need the request/response shapes, what the assistant refuses, or what a call costs |
+| 🚀 **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** | You're deploying, setting env vars, or a push doesn't seem to have landed |
+| ✏️ **[CONTENT.md](docs/CONTENT.md)** | You're adding a product, editing contact details, or adding a category |
+
+> If you change anything under `client/api/`, read the ESM section of [DEPLOYMENT.md](docs/DEPLOYMENT.md#the-esm-constraint) first. Extensionless relative imports pass every local check and fail at runtime in production.
 
 ---
 
