@@ -28,9 +28,9 @@ import nodemailer from 'nodemailer';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
 
-import { getClient, isConfigured, MODEL, EFFORT, logUsage } from './_lib/anthropic';
-import { COMMERCIAL_RULES, enforce } from './_lib/guardrails';
-import { COMPANY_NAME } from './_lib/catalogue';
+import { getClient, isConfigured, MODEL, EFFORT, logUsage } from './_lib/anthropic.js';
+import { COMMERCIAL_RULES, enforce } from './_lib/guardrails.js';
+import { COMPANY_NAME } from './_lib/catalogue.js';
 import {
   handlePreamble,
   clamp,
@@ -38,11 +38,15 @@ import {
   rateLimit,
   isHoneypotTripped,
   LIMITS,
-} from './_lib/http';
+} from './_lib/http.js';
 
-/** Vercel Pro honours this; on Hobby the 10s cap applies and the draft step is skipped on timeout. */
-export const config = { maxDuration: 30 };
-
+/**
+ * The AI draft is capped well inside the platform's default function timeout,
+ * so the enquiry response is never held up waiting on a model call. An explicit
+ * `config.maxDuration` is deliberately not set here: it is plan-dependent on
+ * Vercel, and a value the plan does not allow is a deployment-time failure on
+ * the one endpoint that must never be down.
+ */
 const AI_DRAFT_TIMEOUT_MS = 6000;
 
 interface Enquiry {

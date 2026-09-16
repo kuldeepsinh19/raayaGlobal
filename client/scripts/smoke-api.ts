@@ -12,10 +12,10 @@
  * server, so it needs no network, no key, and no Vercel CLI.
  */
 
-import enquiryHandler from '../api/enquiry';
-import searchHandler from '../api/search';
-import assistantHandler from '../api/assistant';
-import { enforce } from '../api/_lib/guardrails';
+import enquiryHandler from '../api/enquiry.js';
+import searchHandler from '../api/search.js';
+import assistantHandler from '../api/assistant.js';
+import { enforce } from '../api/_lib/guardrails.js';
 
 type Handler = (req: never, res: never) => Promise<void> | void;
 

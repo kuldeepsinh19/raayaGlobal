@@ -11,9 +11,9 @@
  * underscore), so this is shared code, not an endpoint.
  */
 
-import { products } from '../../src/data/products';
-import { CONTACT_INFO } from '../../src/constants/contact';
-import type { Product, ProductCategory } from '../../src/types';
+import { products } from '../../src/data/products.js';
+import { CONTACT_INFO } from '../../src/constants/contact.js';
+import type { Product, ProductCategory } from '../../src/types/index.js';
 
 export { products };
 export type { Product, ProductCategory };

@@ -24,10 +24,10 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
 
-import { getClient, isConfigured, MODEL, EFFORT, logUsage } from './_lib/anthropic';
-import { catalogueForPrompt, keywordSearch, productById } from './_lib/catalogue';
-import type { Product } from './_lib/catalogue';
-import { handlePreamble, clamp, clientIp, rateLimit, LIMITS } from './_lib/http';
+import { getClient, isConfigured, MODEL, EFFORT, logUsage } from './_lib/anthropic.js';
+import { catalogueForPrompt, keywordSearch, productById } from './_lib/catalogue.js';
+import type { Product } from './_lib/catalogue.js';
+import { handlePreamble, clamp, clientIp, rateLimit, LIMITS } from './_lib/http.js';
 
 const SearchResultSchema = z.object({
   product_ids: z
