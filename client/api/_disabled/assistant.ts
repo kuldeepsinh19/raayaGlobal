@@ -23,10 +23,10 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-import { getClient, isConfigured, MODEL, EFFORT, logUsage } from './_lib/anthropic.js';
-import { catalogueForPrompt, contactForPrompt, COMPANY_NAME } from './_lib/catalogue.js';
-import { COMMERCIAL_RULES, enforce } from './_lib/guardrails.js';
-import { handlePreamble, clamp, clientIp, rateLimit, LIMITS } from './_lib/http.js';
+import { getClient, isConfigured, MODEL, EFFORT, logUsage } from '../_lib/anthropic.js';
+import { catalogueForPrompt, contactForPrompt, COMPANY_NAME } from '../_lib/catalogue.js';
+import { COMMERCIAL_RULES, enforce } from '../_lib/guardrails.js';
+import { handlePreamble, clamp, clientIp, rateLimit, LIMITS } from '../_lib/http.js';
 
 interface ChatTurn {
   role: 'user' | 'assistant';
