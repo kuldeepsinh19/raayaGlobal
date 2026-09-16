@@ -190,6 +190,8 @@ client/
 
 `api/_lib/catalogue.ts` imports the same `src/data/products.ts` the pages render. That's deliberate: if the assistant read from its own copy, the two would drift the moment anyone added a product, and it would start confidently describing items the company doesn't sell.
 
+📐 **Design decisions and trade-offs, including the ones deliberately not taken: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
+
 ---
 
 ## Cost
