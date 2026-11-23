@@ -24,7 +24,7 @@ A client website for an Indian agri-exporter — rebuilt around the one thing it
 
 ## What it does
 
-A buyer lands on the site — often an importer in Dubai, Nairobi or Rotterdam, frequently not writing in English — and needs to get from "do you sell what I need?" to "here is my enquiry" without friction. it helps to get connect to international clients so they can import
+A buyer lands on the site — often an importer in Dubai, Nairobi or Rotterdam, frequently not writing in English — and needs to get from "do you sell what I need?" to "here is my enquiry" without friction. The site exists to connect the exporter with those international buyers.
 
 | | |
 |---|---|
