@@ -114,6 +114,7 @@ npm run dev          # Vite dev server → http://localhost:5173
 npm run dev:api      # (separate terminal) Vercel functions → http://localhost:3000
 npm run typecheck    # type-checks BOTH src/ and api/
 npm run build        # typecheck + production build
+npm run preview      # serve the production build locally
 npm run smoke        # ⭐ runs every endpoint with the AI switched off
 ```
 
