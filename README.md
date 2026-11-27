@@ -138,6 +138,19 @@ All checks passed.
 
 It caught two real bugs while this was being written: an MOQ pattern that only matched when the number came *after* the phrase (so "25 MT minimum order quantity" sailed through), and a type error in the newly type-checked `api/`.
 
+### Environment variables
+
+Set these on the Vercel project; locally they go in `client/.env.local`.
+
+| Variable | Required | What it does |
+|---|---|---|
+| `GMAIL_USER` | yes | Gmail account that sends the enquiry emails |
+| `GMAIL_PASS` | yes | A Gmail **App Password** for that account, not the account password |
+| `RECIPIENT_EMAIL` | yes | Inbox that receives enquiries and the AI draft replies |
+| `ANTHROPIC_API_KEY` | no | Turns the AI layer on; leave unset to run without it |
+| `ANTHROPIC_MODEL` | no | Defaults to `claude-opus-5` (see [Cost](#cost)) |
+| `ANTHROPIC_EFFORT` | no | `low` by default; `low`, `medium`, `high`, `xhigh` or `max` |
+
 ---
 
 ## API
