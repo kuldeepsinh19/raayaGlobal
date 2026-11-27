@@ -231,6 +231,8 @@ Measured per call and logged as structured JSON on every request, so spend is vi
 
 > **If traffic grows, change one variable.** The assistant is a public endpoint anyone can talk to. `ANTHROPIC_MODEL=claude-haiku-4-5` cuts per-turn cost roughly 5x. Opus is the default because it gives the best answers — that trade is the deployer's call, so it's documented rather than made silently.
 
+Reasoning effort is set separately with `ANTHROPIC_EFFORT` and defaults to `low`: these are short, well-specified tasks, so higher effort mostly adds cost and latency.
+
 Rate limiting is per-instance and therefore **best-effort**: serverless instances don't share memory, so under load each new instance gets a fresh allowance. It blunts the common case (one script hammering one warm instance) and costs nothing. Doing it properly needs a shared store (Vercel KV, Upstash) — a deliberate non-goal here, and stated rather than overstated.
 
 ---
